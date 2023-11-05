@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
-import "./style.scss";
+import style from "./index.module.scss";
 
-const img1Url =
-  "https://gw.alicdn.com/bao/uploaded/i3/2206959856582/O1CN01047eSf1yUbnZR6b7o_!!0-item_pic.jpg";
-const img2Url =
-  "https://gw.alicdn.com/bao/uploaded///asearch.alicdn.com/bao/uploaded/O1CN013HQHLr1PPYkN0IqcJ_!!6000000001833-0-yinhe.jpg";
+import img1Url from "../../imgs/img1.png";
+import img2Url from "../../imgs/img2.png";
+import img3Url from "../../imgs/img3.png";
+import img4Url from "../../imgs/img4.png";
+
 
 function clamp(min: number, mid: number, max: number): number {
   return mid < min ? min : mid < max ? mid : max;
@@ -65,13 +66,13 @@ const Case2: React.FC = () => {
     const canvas = canvasRef.current;
     const newCanvas = newCanvasRef.current;
     if (canvas && newCanvas && imageLoaded && image2Loaded) {
-      canvas.width = 1800;
-      canvas.height = 1200;
-      canvas.style.width = "900px";
-      canvas.style.height = "600px";
+      canvas.width = 320;
+      canvas.height = 320;
+      canvas.style.width = "160px";
+      canvas.style.height = "160px";
 
-      newCanvas.width = 1800;
-      newCanvas.height = 1200;
+      newCanvas.width = 320;
+      newCanvas.height = 320;
 
       const context = canvas.getContext("2d");
       const newContext = newCanvas.getContext("2d");
@@ -110,8 +111,11 @@ const Case2: React.FC = () => {
 
   return (
     <div className="container">
-      <canvas ref={canvasRef} id="canvas" />
-      <canvas ref={newCanvasRef} />
+      <h4>Case 2</h4>
+      <div className={style.box}>
+        <canvas ref={canvasRef} id="canvas" />
+        <canvas ref={newCanvasRef} />
+      </div>
       <button onClick={toggleState}>Toggle</button>
     </div>
   );

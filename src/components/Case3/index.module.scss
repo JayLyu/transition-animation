@@ -1,20 +1,18 @@
 $bar-color: #3d7fff;
-$anima-time: 2.5s;
+$anima-time: 1.5s;
 $size: 160px;
 
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  h4 {
-    margin: 0;
-    padding: 0;
-  }
+@mixin scanBorder {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  opacity: .5;
+  content: "";
+  border: 2px solid $bar-color;
 }
 
-.productImg {
+// 图片相对定位
+.imgStyle {
   position: absolute;
   top: 0;
   left: 0;
@@ -23,22 +21,74 @@ $size: 160px;
   height: 100%;
 }
 
+// 整体容器
 .box {
+  box-sizing: border-box;
+  border: 1px solid #e4e5e7;
   position: relative;
   border-radius: 12px;
   width: $size;
   height: $size;
   position: relative;
   overflow: hidden;
+  background: #f7f8fa;
+  // background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAArklEQVQYlWNgYGD4T8DAwMT/ADGFkmGDBhAkS/ALhRDo4AMoAMwZsAOVikVvgBExjRxGFlgGcMyv+ATGhi7S5mApGeQxpaoyfACVrMTExyAhaZKXgwIOAOgWQCjAMAAH6km5sDAAMMAAAAAElFTkSuQmCC') repeat;
+  // 顶部装饰
+  .scanTopBorder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    &::before {
+      @include scanBorder;
+      top: 0;
+      left: 0;
+      border-bottom: none;
+      border-right: none;
+      border-top-left-radius: 12px;
+    }
+    &::after {
+      @include scanBorder;
+      top: 0;
+      right: 0;
+      border-bottom: none;
+      border-left: none;
+      border-top-right-radius: 12px;
+    }
+  }
+  // 底部装饰
+  .scanBottomBorder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    &::before {
+      @include scanBorder;
+      left: 0;
+      bottom: 0;
+      border-top: none;
+      border-right: none;
+      border-bottom-left-radius: 12px;
+    }
+    &::after {
+      @include scanBorder;
+      right: 0;
+      bottom: 0;
+      border-top: none;
+      border-left: none;
+      border-bottom-right-radius: 12px;
+    }
+  }
 }
 
+// 扫描动画
 .anima::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: 1.25rem;
+  width: calc(100% - 2.5rem);
   height: 4px;
   background: $bar-color;
   box-shadow: 0 0 6rem 3rem $bar-color;

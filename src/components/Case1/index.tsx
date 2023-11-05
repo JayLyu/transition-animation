@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./style.scss";
+import style from "./index.module.scss";
 
-const img1Url =
-  "https://gw.alicdn.com/bao/uploaded/i3/2206959856582/O1CN01047eSf1yUbnZR6b7o_!!0-item_pic.jpg";
-const img2Url =
-  "https://gw.alicdn.com/bao/uploaded///asearch.alicdn.com/bao/uploaded/O1CN013HQHLr1PPYkN0IqcJ_!!6000000001833-0-yinhe.jpg";
+
+import img1 from "../../imgs/img1.png";
+import img2 from "../../imgs/img2.png";
+import img3 from "../../imgs/img3.png";
+import img4 from "../../imgs/img4.png";
 
 const Case1: React.FC = () => {
   const [showImage, setShowImage] = useState(true);
@@ -27,8 +28,8 @@ const Case1: React.FC = () => {
 
     const loadImages = async () => {
       const [img1DataUrl, img2DataUrl] = await Promise.all([
-        loadImage(img1Url),
-        loadImage(img2Url),
+        loadImage(img1),
+        loadImage(img2),
       ]);
       setImg1Base64(img1DataUrl);
       setImg2Base64(img2DataUrl);
@@ -74,7 +75,10 @@ const Case1: React.FC = () => {
 
   return (
     <div className="container">
-      <canvas ref={canvasRef} />
+      <h4>Case 1</h4>
+      <div className={style.box}>
+        <canvas ref={canvasRef} />
+      </div>
       <button className="btn" onClick={handleButtonClick}>
         上传图片
       </button>
