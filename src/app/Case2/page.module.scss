@@ -1,0 +1,33 @@
+$size: 160px;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.box {
+  box-sizing: border-box;
+  border: 1px solid #e4e5e7;
+  position: relative;
+  border-radius: 12px;
+  width: $size;
+  height: $size;
+  position: relative;
+  overflow: hidden;
+  background: #f7f8fa;
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
+  .btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
