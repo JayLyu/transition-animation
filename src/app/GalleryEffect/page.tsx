@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./page.module.scss";
 
 
-const Case4 = () => {
+const GalleryEffect = () => {
   const imgs = [
     "https://plus.unsplash.com/premium_photo-1694161845354-f1e829687c03?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8",
     "https://plus.unsplash.com/premium_photo-1680831748238-1fe52ad0e3af?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHx8",
@@ -29,4 +29,4 @@ const Case4 = () => {
   );
 };
 
-export default Case4;
+export default GalleryEffect;

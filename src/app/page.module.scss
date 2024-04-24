@@ -1,32 +1,11 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  width: 100%;
-  border-bottom: 1px solid rgba(gray, .12);
-}
 
 .content {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
   flex-grow: 1;
-  width: 100%;
-  height: -webkit-fill-available;
-  padding: 6rem;
   overflow: hidden;
   .card {
     display: flex;

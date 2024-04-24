@@ -1,3 +1,4 @@
+import styles from './page.module.scss'
 
 export default function RootLayout({
   children,
@@ -5,7 +6,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <main>
+    <main className={styles.main}>
       {children}
     </main>
   )
