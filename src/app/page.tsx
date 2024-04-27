@@ -23,6 +23,9 @@ export default function Home() {
       <Link href={"/GodRays"}>
         <div className={styles.card}>God Rays</div>
       </Link>
+      <Link href={"/WaveAnimation"}>
+        <div className={styles.card}>3D Wave Animation</div>
+      </Link>
     </div>
   );
 }
