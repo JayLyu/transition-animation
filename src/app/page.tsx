@@ -20,6 +20,9 @@ export default function Home() {
       <Link href={"/AudioWaveLoader"}>
         <div className={styles.card}>Audio Wave Loader</div>
       </Link>
+      <Link href={"/GodRays"}>
+        <div className={styles.card}>God Rays</div>
+      </Link>
     </div>
   );
 }
