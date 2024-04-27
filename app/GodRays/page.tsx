@@ -3,8 +3,12 @@
 import { useState } from "react";
 import styles from "./page.module.scss";
 
-export default function GodRays() {
-  const [theme, toggleTheme] = useState<"light" | "dark">("dark");
+interface IGodRays {
+  currentTheme?: "light" | "dark";
+}
+
+export default function GodRays({ currentTheme = "dark" }: IGodRays) {
+  const [theme, toggleTheme] = useState<"light" | "dark">(currentTheme);
   return (
     <div
       className={

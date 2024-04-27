@@ -26,6 +26,12 @@ export default function Home() {
       <Link href={"/WaveAnimation"}>
         <div className={styles.card}>3D Wave Animation</div>
       </Link>
+      <Link href={"/LiveCode"}>
+        <div className={styles.card}>Live Code</div>
+      </Link>
+      <Link href={"/mdx-page"}>
+        <div className={styles.card}>MDX</div>
+      </Link>
     </div>
   );
 }
