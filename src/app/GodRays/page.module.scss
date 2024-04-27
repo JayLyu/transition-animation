@@ -38,7 +38,7 @@
     font-size: 2rem;
     color: #1f2937;
     margin-bottom: 1rem;
-    transition: color opacity 0.15s ease-in-out;
+    transition: color,opacity 0.15s ease-in-out;
     span {
       color: white;
       padding: 0.25rem;
@@ -54,7 +54,7 @@
     background-color: transparent;
     padding: 0.5rem 1rem;
     border-radius: 1rem;
-    transition: color opacity border-color 0.15s ease-in-out;
+    transition: color,opacity,border-color 0.15s ease-in-out;
     cursor: pointer;
   }
 }
