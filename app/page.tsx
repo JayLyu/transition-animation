@@ -32,6 +32,9 @@ export default function Home() {
       <Link href={"/mdx-page"}>
         <div className={styles.card}>MDX</div>
       </Link>
+      <Link href={"/r3f"}>
+        <div className={styles.card}>React ThreeJS</div>
+      </Link>
     </div>
   );
 }

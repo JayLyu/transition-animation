@@ -14,7 +14,5 @@ const withMDX = createMDX({
  
 // Merge MDX config with Next.js config
 export default withMDX({
-  ...nextConfig,
-  // 额外的 MDX 选项可以在这里添加，例如扩展名：
-  extension: /\.mdx?$/
+  ...nextConfig
 })
