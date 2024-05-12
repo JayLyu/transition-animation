@@ -35,6 +35,9 @@ export default function Home() {
       <Link href={"/r3f"}>
         <div className={styles.card}>React ThreeJS</div>
       </Link>
+      <Link href={"/Buttons"}>
+        <div className={styles.card}>Buttons</div>
+      </Link>
     </div>
   );
 }

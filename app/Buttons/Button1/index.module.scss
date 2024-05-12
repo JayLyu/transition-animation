@@ -1,0 +1,78 @@
+.buttoLlight {
+  --button-width: 18rem;
+  --button-height: 3rem;
+  --font-size: 14px;
+  --border-color: rgba(255, 255, 255, 0.15);
+  --fade-in: all .15s ease-in;
+  --fade-out: all .3s ease-out;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-font-smoothing: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: var(--button-width);
+  height: var(--button-height);
+  background-color: black;
+  border-radius: .75rem;
+  font-size: var(--font-size);
+  font-weight: bold;
+  line-height: 1;
+  box-shadow: rgba(72, 0, 255, 0.72) 0px 0.602187px 3.01094px -1.25px inset,
+    rgba(72, 0, 255, 0.635) 0px 2.28853px 11.4427px -2.5px inset,
+    rgba(72, 0, 255, 0.25) 0px 10px 50px -3.75px inset,
+    rgba(0, 0, 0, 0.184) 0px 0.796192px 0.796192px -0.9375px,
+    rgba(0, 0, 0, 0.173) 0px 2.41451px 2.41451px -1.875px,
+    rgba(0, 0, 0, 0.15) 0px 6.38265px 6.38265px -2.8125px,
+    rgba(0, 0, 0, 0.063) 0px 20px 20px -3.75px,
+    rgba(255, 231, 222, 0.25) 0px -6px 8px 0px inset;
+  .light {
+    position: absolute;
+    display: block;
+    width:  var(--button-width);
+    height: var(--button-height);
+    flex-shrink: 0;
+    background-color: white;
+    opacity: 0.48;
+    filter: blur(2rem);
+    transform: translateX(-20%) rotate(28deg);
+    transform-origin: left center;
+    transition: var(--fade-out);
+  }
+  .content1 {
+    position: absolute;
+    top: calc(50% - var(--font-size)/2);
+    opacity: 1;
+    transform: translateY(0%) rotateX(0deg);
+    transform-origin: 50% 50%;
+    transition: var(--fade-out);
+  }
+  .content2 {
+    position: absolute;
+    top: calc(50% - var(--font-size)/2);
+    opacity: 0;
+    transform: translateY(100%) rotateX(-90deg);
+    transform-origin: 50% 50%;
+    transition: var(--fade-out);
+  }
+  &:hover {
+    .light {
+      transform: translateX(20%) rotate(28deg);
+      transform-origin: right center;
+      transition: var(--fade-in);
+    }
+    .content1 {
+      opacity: 0;
+      transform: translateY(-100%) rotateX(90deg);
+      transition: var(--fade-in);
+    }
+    .content2 {
+      opacity: 1;
+      transform: translateX(0%) rotateX(0deg);
+      transition: var(--fade-in);
+    }
+  }
+}
